@@ -48,12 +48,6 @@ public class Order {
 	 */
 	public void setStatus(OrderStatus status) {
 		this.status = status;
-	}
-	/**
-	 * @return the items
-	 */
-	public List<OrderItem> getItems() {
-		return items;
 	}	
 	/**
 	 * @return the client

@@ -4,16 +4,16 @@ public class OrderItem {
 	
 	private Integer quantity;
 	private Double price;
-	private Product p;
+	private Product product;
 	/**
 	 * @param quantity
 	 * @param price
 	 * @param p
 	 */
-	public OrderItem(Integer quantity, Double price, Product p) {
+	public OrderItem(Integer quantity, Double price, Product product) {
 		this.quantity = quantity;
 		this.price = price;
-		this.p = p;
+		this.product = product;
 	}
 	/**
 	 * @return the quantity
@@ -42,14 +42,14 @@ public class OrderItem {
 	/**
 	 * @return the p
 	 */
-	public Product getP() {
-		return p;
+	public Product getProduct() {
+		return product;
 	}
 	/**
 	 * @param p the p to set
 	 */
-	public void setP(Product p) {
-		this.p = p;
+	public void setProduct(Product product) {
+		this.product = product;
 	}
 	
 	public Double subTotal() {
@@ -58,8 +58,8 @@ public class OrderItem {
 
 	@Override
 	public String toString() {
-		return getP().getName() 
-					+ ", $" + String.format("%.2f", getP().getPrice())
+		return getProduct().getName() 
+					+ ", $" + String.format("%.2f", getProduct().getPrice())
 					+ ", Quantity: " + quantity 
 					+ ", " + "Subtotal: $" + String.format("%.2f", subTotal());  
 	}
